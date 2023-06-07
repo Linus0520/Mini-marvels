@@ -23,6 +23,7 @@ exports.handler = async function () {
         images,
       } = fields;
       const { url } = images[0];
+      console.log(product)
       return {
         id,
         name,
