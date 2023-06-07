@@ -9,7 +9,7 @@ const Filters = () => {
     filters: {
       text,
       category,
-      // company,
+      company,
       color,
       min_price,
       price,
@@ -22,7 +22,7 @@ const Filters = () => {
   } = useFilterContext()
 
   const categories = getUniqueValues(all_products, 'category')
-  // const companies = getUniqueValues(all_products, 'company')
+  const companies = getUniqueValues(all_products, 'company')
   const colors = getUniqueValues(all_products, 'colors')
   return (
     <Wrapper>
@@ -63,7 +63,7 @@ const Filters = () => {
           </div>
           {/* end of category */}
           {/* company */}
-          {/* <div className='form-control'>
+          <div className='form-control'>
             <h5>company</h5>
             <select
               name='company'
@@ -79,7 +79,7 @@ const Filters = () => {
                 )
               })}
             </select>
-          </div> */}
+          </div>
           {/* end of company */}
           {/* colors */}
           <div className='form-control'>
@@ -187,12 +187,12 @@ const Wrapper = styled.section`
   .active {
     border-color: var(--clr-grey-5);
   }
-  ${'' /* .company {
+  .company {
     background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
-  } */}
+  }
   .colors {
     display: flex;
     align-items: center;
