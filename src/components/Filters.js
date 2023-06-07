@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useFilterContext } from '../context/filter_context'
+import { useProductsContext } from '../context/products_context'
 import { getUniqueValues, formatPrice } from '../utils/helpers'
-import { FaCheck } from 'react-icons/fa'
+import { FaCheck, FaTimes } from 'react-icons/fa'
 
 const Filters = () => {
   const {
     filters: {
       text,
       category,
-      company,
+      // company,
       color,
       min_price,
       price,
@@ -21,12 +22,15 @@ const Filters = () => {
     clearFilters,
   } = useFilterContext()
 
+  const { isFilterOpen, closeFilter } = useProductsContext()
+
   const categories = getUniqueValues(all_products, 'category')
-  const companies = getUniqueValues(all_products, 'company')
+  // const companies = getUniqueValues(all_products, 'company')
   const colors = getUniqueValues(all_products, 'colors')
   return (
     <Wrapper>
-      <div className='content'>
+      <div className={`content ${isFilterOpen ? 'sidebar show-sidebar' : 'sidebar hide-sidebar'}`}>
+      <div>
         <form onSubmit={(e) => e.preventDefault()}>
           {/* search input */}
           <div className='form-control'>
@@ -63,7 +67,7 @@ const Filters = () => {
           </div>
           {/* end of category */}
           {/* company */}
-          <div className='form-control'>
+          {/* <div className='form-control'>
             <h5>company</h5>
             <select
               name='company'
@@ -79,7 +83,7 @@ const Filters = () => {
                 )
               })}
             </select>
-          </div>
+          </div> */}
           {/* end of company */}
           {/* colors */}
           <div className='form-control'>
@@ -135,26 +139,49 @@ const Filters = () => {
           {/* end of price */}
           {/* shipping */}
           <div className='form-control shipping'>
-            <label htmlFor='shipping'>free shipping</label>
-            <input
+            <label htmlFor='shipping'>free shipping <input
               type='checkbox'
               name='shipping'
               id='shipping'
               checked={shipping}
               onChange={updateFilters}
-            />
+              className='check-box'
+            /></label>
+           
           </div>
           {/* end of  shipping */}
         </form>
         <button type='button' className='clear-btn' onClick={clearFilters}>
           clear filters
         </button>
+        </div>
+        <button className='close-btn' onClick={closeFilter}>
+            <FaTimes />
+      </button>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
+
+.content{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+  .close-btn {
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+    cursor: pointer;
+    margin-top: 0.2rem;
+    align-self:flex-start;
+  }
+
   .form-control {
     margin-bottom: 1.25rem;
     h5 {
@@ -234,16 +261,53 @@ const Wrapper = styled.section`
     column-gap: 0.5rem;
     font-size: 1rem;
   }
+
+  .check-box{
+    margin-left:2rem;
+  }
   .clear-btn {
     background: var(--clr-grey-5);
     color: var(--clr-white);
     padding: 0.5rem 1rem;
     border-radius: var(--radius);
   }
+
+  ${'' /* small show */}
+  .sidebar {
+    margin-bottom:2rem;
+    padding:2rem;
+    background: var(--clr-primary-8);
+  }
+
+  .hide-sidebar{
+    display:none;
+  }
+
+  ${'' /* click/show */}
+  .show-sidebar {
+    transform: translate(0);
+    transition: var(--transition);
+    z-index: 999;
+  }
+  
+  ${'' /* bigger show */}
   @media (min-width: 768px) {
+    
+    .sidebar{
+    padding:0rem;
+    display:block;
+    background: white;
+    }
+
     .content {
       position: sticky;
       top: 1rem;
+      transition: var(--transition);
+      transform: translate(0);
+    }
+
+    .close-btn{
+      display:none;
     }
   }
 `
