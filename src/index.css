@@ -139,7 +139,6 @@ p {
 
 }
 .section-center {
-  text-align: center;
   width: 70vw;
   margin: 0 auto;
   max-width: var(--max-width);
@@ -156,7 +155,6 @@ p {
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
-    text-align: left;
   }
 }
 .text-center {
