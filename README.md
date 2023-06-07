@@ -33,7 +33,7 @@ index.css
 
 ```css
 body {
-  font-family: 'Khand', sans-serif;
+  font-family: "Khand", sans-serif;
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -45,7 +45,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Array', sans-serif;
+  font-family: "Array", sans-serif;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
@@ -116,7 +116,7 @@ components/Hero.js
 components/Logo
 
 ```js
-import styled from 'styled-components';
+import styled from "styled-components";
 const Logo = () => {
   return (
     <Wrapper>
@@ -161,8 +161,8 @@ export default Logo;
 components/Hero
 
 ```js
-<article className='img-container'>
-  <img src={heroBcg} alt='nice table' className='main-img' />
+<article className="img-container">
+  <img src={heroBcg} alt="nice table" className="main-img" />
 </article>
 ```
 
@@ -202,7 +202,7 @@ AIRTABLE_TABLE=
 exports.handler = async (event, context, cb) => {
   return {
     statusCode: 200,
-    body: 'products route',
+    body: "products route",
   };
 };
 ```
@@ -226,10 +226,10 @@ npm i airtable-node
 functions/products
 
 ```js
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 dotenv.config();
 
-const Airtable = require('airtable-node');
+const Airtable = require("airtable-node");
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base(process.env.AIRTABLE_BASE)
   .table(process.env.AIRTABLE_TABLE);
@@ -238,19 +238,19 @@ exports.handler = async function () {
   try {
     const response = await airtable.list({ maxRecords: 200 });
 
-    console.log('#######');
+    console.log("#######");
     console.log(response);
-    console.log('#######');
+    console.log("#######");
 
     return {
       statusCode: 200,
-      body: 'products route',
+      body: "products route",
     };
   } catch (error) {
     console.log(error);
     return {
       statusCode: 500,
-      body: 'There was an error',
+      body: "There was an error",
     };
   }
 };
@@ -302,7 +302,7 @@ exports.handler = async function () {
     console.log(error);
     return {
       statusCode: 500,
-      body: 'There was an error',
+      body: "There was an error",
     };
   }
 };
@@ -313,15 +313,15 @@ exports.handler = async function () {
 utils/constants.js
 
 ```js
-export const products_url = '/.netlify/functions/products';
+export const products_url = "/.netlify/functions/products";
 // export const products_url = 'https://course-api.com/react-store-products'
 ```
 
 #### Fetch Single Product - Query Params
 
 ```js
-require('dotenv').config();
-const Airtable = require('airtable-node');
+require("dotenv").config();
+const Airtable = require("airtable-node");
 
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base(process.env.AIRTABLE_BASE)
@@ -332,12 +332,12 @@ exports.handler = async (event, context, cb) => {
   if (id) {
     return {
       statusCode: 200,
-      body: 'product',
+      body: "product",
     };
   }
   return {
     statusCode: 400,
-    body: 'Please provide product id',
+    body: "Please provide product id",
   };
 };
 ```
@@ -350,8 +350,8 @@ exports.handler = async (event, context, cb) => {
 functions/single-product
 
 ```js
-require('dotenv').config();
-const Airtable = require('airtable-node');
+require("dotenv").config();
+const Airtable = require("airtable-node");
 
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base(process.env.AIRTABLE_BASE)
@@ -382,7 +382,7 @@ exports.handler = async (event, context, cb) => {
   }
   return {
     statusCode: 400,
-    body: 'Please provide product id',
+    body: "Please provide product id",
   };
 };
 ```

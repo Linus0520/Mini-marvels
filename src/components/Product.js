@@ -7,9 +7,10 @@ const Product = ({ image, name, price, id }) => {
   return (
     <Wrapper>
       <div className='container'>
+      
+        <Link to={`/products/${id}`}>
         <img src={image} alt={name} />
-        <Link to={`/products/${id}`} className='link'>
-          <FaSearch />
+        <div className='link'></div>
         </Link>
       </div>
       <footer>
@@ -33,24 +34,17 @@ const Wrapper = styled.article`
     transition: var(--transition);
   }
   .link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--clr-primary-5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    transition: var(--transition);
-    opacity: 0;
     cursor: pointer;
-    svg {
-      font-size: 1.25rem;
-      color: var(--clr-white);
-    }
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.9);
   }
   .container:hover img {
     opacity: 0.5;

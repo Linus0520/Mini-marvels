@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import CartColumns from './CartColumns'
 import CartItem from './CartItem'
 import CartTotals from './CartTotals'
+import { BsArrowLeft } from 'react-icons/bs'
 const CartItems = () => {
   const { cart, clearCart } = useCartContext()
 
@@ -17,11 +18,11 @@ const CartItems = () => {
       <hr />
       <div className='link-container'>
         <Link to='/products' className='link-btn'>
-          continue shopping
+        <BsArrowLeft className='middle'/> continue shopping
         </Link>
         <button
           type='button'
-          className='link-btn clear-btn'
+          className='clear-btn'
           onClick={clearCart}
         >
           clear shopping cart
@@ -44,13 +45,22 @@ const Wrapper = styled.section`
     padding: 0.25rem 0.5rem;
     background: var(--clr-primary-5);
     color: var(--clr-white);
-    border-radius: var(--radius);
+    border-radius: 2rem;
     letter-spacing: var(--spacing);
     font-weight: 400;
     cursor: pointer;
+    padding:.5rem;
   }
   .clear-btn {
-    background: var(--clr-black);
+    color: var(--clr-primary-5);
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+  }
+
+  .clear-btn:hover{
+    color: var(--clr-grey-5);
   }
 `
 export default CartItems

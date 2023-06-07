@@ -61,7 +61,7 @@ const Wrapper = styled.article`
     width: 100%;
     height: 100%;
     display: block;
-    border-radius: var(--radius);
+    border-radius: 0.1rem;
     object-fit: cover;
   }
   h5 {
@@ -106,14 +106,14 @@ const Wrapper = styled.article`
     background: transparent;
     border: transparent;
     letter-spacing: var(--spacing);
-    background: var(--clr-red-dark);
-    width: 1.5rem;
-    height: 1.5rem;
+    background: var( --clr-grey-6);
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius);
-    font-size: 0.75rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
     cursor: pointer;
   }
   @media (min-width: 776px) {

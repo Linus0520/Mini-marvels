@@ -7,12 +7,10 @@ const Services = () => {
       <div className='section-center'>
         <article className='header'>
           <h3>
-            custom furniture <br /> built only for you
+          Unleash your inner child
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            dolorum debitis consectetur reprehenderit non aliquam voluptates
-            dolore aut vero consequuntur.
+          Igniting joy, Mini Marvels is the ultimate destination for curated mini toys, sparking imagination and nostalgia since 2020.
           </p>
         </article>
         <div className='services-center'>
@@ -39,11 +37,9 @@ const Wrapper = styled.section`
   }
   padding: 5rem 0;
 
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-8);
 
-  .header h3 {
-    margin-bottom: 2rem;
-  }
+
   p {
     margin-bottom: 0;
     line-height: 1.8;
@@ -55,7 +51,7 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: var(--clr-primary-7);
+    background: var(--clr-primary-9);
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: var(--radius);
@@ -71,7 +67,7 @@ const Wrapper = styled.section`
     place-items: center;
     margin-bottom: 1rem;
     border-radius: 50%;
-    background: var(--clr-primary-10);
+    background: white;
     color: var(--clr-primary-1);
     svg {
       font-size: 2rem;

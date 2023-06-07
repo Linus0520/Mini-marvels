@@ -4,12 +4,10 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className='section-center'>
-        <h3>Join our newsletter and get 20% off</h3>
+        <h3>Join our newsletter and get 10% off</h3>
         <div className='content'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            sint unde quaerat ratione soluta veniam provident adipisci cumque
-            eveniet tempore?
+          Be the first to know! Sign up for our newsletter and enjoy an exclusive 10% discount on your first order. Stay in the loop with the latest arrivals, special offers, and mini marvels that will bring joy to your world!
           </p>
           <form className='contact-form'>
             <input
@@ -37,7 +35,7 @@ const Wrapper = styled.section`
     color: var(--clr-grey-5);
   }
   .contact-form {
-    width: 90vw;
+    width: 70vw;
     max-width: 500px;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -46,33 +44,32 @@ const Wrapper = styled.section`
   .form-input,
   .submit-btn {
     font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--clr-black);
+    padding: 0.8rem;
+    border: 1px solid var(--clr-grey-7);
   }
   .form-input {
     border-right: none;
     color: var(--clr-grey-3);
-    border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
-  .submit-btn {
-    border-top-right-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-  }
+
   .form-input::placeholder {
-    color: var(--clr-black);
+    color: var(--clr-grey-7);
     text-transform: capitalize;
   }
   .submit-btn {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     background: var(--clr-primary-5);
     text-transform: capitalize;
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-white);
   }
   .submit-btn:hover {
-    color: var(--clr-white);
+    color: var(--clr-grey-8);
   }
   @media (min-width: 992px) {
     .content {
@@ -88,6 +85,18 @@ const Wrapper = styled.section`
   }
   @media (min-width: 1280px) {
     padding: 15rem 0;
+  }
+
+  @media (max-width: 576px) {
+  #btn-modify{
+    width:200px;
+    padding: 0.5rem 1rem;
+  }
+
+  .form-input,
+  .submit-btn {
+    padding:0.6rem;
+  }
   }
 `
 

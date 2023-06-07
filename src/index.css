@@ -6,18 +6,18 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(22, 28%, 21%);
-  --clr-primary-2: hsl(22, 28%, 29%);
-  --clr-primary-3: hsl(22, 28%, 37%);
-  --clr-primary-4: hsl(22, 28%, 45%);
+  --clr-primary-1: #172554;
+  --clr-primary-2: #1e3a8a;
+  --clr-primary-3: #0393FB;
+  --clr-primary-4: #93c5fd;
   /* primary/main color */
-  --clr-primary-5: hsl(22, 31%, 52%);
+  --clr-primary-5: #0393FB;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(22, 31%, 60%);
-  --clr-primary-7: hsl(22, 31%, 67%);
-  --clr-primary-8: hsl(20, 31%, 74%);
-  --clr-primary-9: hsl(22, 31%, 81%);
-  --clr-primary-10: hsl(22, 31%, 88%);
+  --clr-primary-6: #60a5fa;
+  --clr-primary-7: #bfdbfe;
+  --clr-primary-8: #bfdbfe;
+  --clr-primary-9: #eff6ff;
+  --clr-primary-10:#bfdbfe;
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -38,7 +38,7 @@ Variables
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --radius: 0.25rem;
+  --radius: .5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -58,8 +58,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+   font-family: 'Supreme', sans-serif;
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -84,6 +84,7 @@ h5 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  font-family: 'Nunito', sans-serif;
 }
 h1 {
   font-size: 2.5rem;
@@ -135,11 +136,20 @@ p {
 /* section */
 .section {
   padding: 5rem 0;
+
 }
 .section-center {
-  width: 90vw;
+  width: 70vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+
+.loading-frame{
+  height: 90vh;;
+}
+
+.middle{
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 992px) {
@@ -170,16 +180,16 @@ p {
 .btn {
   text-transform: uppercase;
   background: var(--clr-primary-5);
-  color: var(--clr-primary-10);
-  padding: 0.375rem 0.75rem;
+  color: white;
+  padding: 0.5rem 1rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 400;
   transition: var(--transition);
-  font-size: 0.875rem;
+  font-size: 1rem;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
+  border-radius: 2rem;
   border-color: transparent;
 }
 .btn:hover {
@@ -203,4 +213,16 @@ p {
 }
 .page {
   min-height: calc(100vh - (20vh + 10rem));
+}
+#btn-modify{
+  width:200px;
+  padding:1rem;
+}
+
+@media (max-width: 576px) {
+  #btn-modify{
+    width:200px;
+    padding: 0.5rem 1rem;
+  }
+
 }

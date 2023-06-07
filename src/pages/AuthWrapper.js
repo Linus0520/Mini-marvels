@@ -25,6 +25,10 @@ const Wrapper = styled.section`
   min-height: 100vh;
   display: grid;
   place-items: center;
+h1{
+  color:hsl( --clr-primary-4);
+  font-size:5rem;
+}
 `
 
 export default AuthWrapper

@@ -31,7 +31,7 @@ const AddToCart = ({ product }) => {
   }
   return (
     <Wrapper>
-      <div className='colors'>
+      {/* <div className='colors'>
         <span>colors :</span>
         <div>
           {colors.map((color, index) => {
@@ -49,7 +49,7 @@ const AddToCart = ({ product }) => {
             )
           })}
         </div>
-      </div>
+      </div> */}
       <div className='btn-container'>
         <AmountButtons
           increase={increase}
@@ -106,11 +106,15 @@ const Wrapper = styled.section`
   }
   .btn-container {
     margin-top: 2rem;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
   }
 
   .btn {
-    margin-top: 1rem;
-    width: 140px;
+    padding: 0.5rem 1rem;
+    width: 150px;
+    text-align:center;
   }
 `
 export default AddToCart

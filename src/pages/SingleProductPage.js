@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
 import { formatPrice } from '../utils/helpers';
+import { BsArrowLeft } from 'react-icons/bs'
 import {
   Loading,
   Error,
@@ -58,10 +59,10 @@ const SingleProductPage = () => {
       <PageHero title={name} product />
       <div className='section section-center page'>
         <Link to='/products' className='btn'>
-          back to products
+        <BsArrowLeft className='middle'/> back to products
         </Link>
         <div className='product-center'>
-          <ProductImages images={images} />
+        {images &&  <ProductImages images={images} />}
           <section className='content'>
             <h2>{name}</h2>
             <Stars stars={stars} reviews={reviews} />
@@ -71,10 +72,10 @@ const SingleProductPage = () => {
               <span>Available : </span>
               {stock > 0 ? 'In stock' : 'out of stock'}
             </p>
-            <p className='info'>
+            {/* <p className='info'>
               <span>SKU :</span>
               {sku}
-            </p>
+            </p> */}
             <p className='info'>
               <span>Brand :</span>
               {company}

@@ -1,29 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import { PageHero } from '../components'
-import aboutImg from '../assets/hero-bcg.jpeg'
+import aboutImg from '../assets/hero-bcg-3.jpg'
 const AboutPage = () => {
   return (
     <main>
       <PageHero title='about' />
       <Wrapper className='page section section-center'>
-        <img src={aboutImg} alt='nice desk' />
+        <img src={aboutImg} alt='about imge' />
         <article>
           <div className='title'>
             <h2>our story</h2>
             <div className='underline'></div>
           </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            accusantium sapiente tempora sed dolore esse deserunt eaque
-            excepturi, delectus error accusamus vel eligendi, omnis beatae.
-            Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
-            dolore, obcaecati incidunt sequi blanditiis est exercitationem
-            molestiae delectus saepe odio eligendi modi porro eaque in libero
-            minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
-            ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
-            similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
-            iste.
+          At Mini Marvels, we believe that playfulness knows no age limits. Whether you're a toy enthusiast, a hobbyist, or simply looking for unique gifts, our curated selection of mini wonders will spark your imagination and bring a smile to your face. From tiny action figures and intricate puzzle sets to adorable keychain companions and whimsical novelty items, our collection is designed to capture the essence of playfulness in a pocket-sized package.
+<br/><br/>
+Navigating our user-friendly website is a breeze, allowing you to browse through our extensive range of mini marvels, read detailed descriptions, and make secure purchases with ease. We also offer convenient shipping options to ensure that your mini delights arrive promptly at your doorstep.
+<br/><br/>
+Join us on this enchanting journey and rediscover the joy of play. Embrace your inner child and unlock the magic of miniatures with Mini Marvels. Let the fun begin!
           </p>
         </article>
       </Wrapper>

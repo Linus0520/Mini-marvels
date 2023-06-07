@@ -28,7 +28,7 @@ const FeaturedProducts = () => {
           return <Product key={product.id} {...product} />
         })}
       </div>
-      <Link to='/products' className='btn'>
+      <Link to='/products' className='btn' id="btn-modify">
         all products
       </Link>
     </Wrapper>
@@ -42,7 +42,7 @@ const Wrapper = styled.section`
     display: grid;
     gap: 2.5rem;
     img {
-      height: 225px;
+      height: 100%;
     }
   }
   .btn {

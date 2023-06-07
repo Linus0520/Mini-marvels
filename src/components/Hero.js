@@ -8,14 +8,10 @@ const Hero = () => {
     <Wrapper className='section-center'>
       <article className='content'>
         <h1>
-          design your <br />
-          comfort zone
+        Fun Meets Tiny
         </h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
-          sed omnis corporis doloremque possimus velit! Repudiandae nisi odit,
-          aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis
-          alias?
+        Welcome to Mini Marvels, the ultimate destination for all things fun and miniature! Our online store is dedicated to providing you an exciting assortment of tiny toys and captivating collectibles that are sure to bring a dose of joy and nostalgia to your everyday life.
         </p>
         <Link to='/products' className='btn hero-btn'>
           shop now
