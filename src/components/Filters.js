@@ -172,13 +172,13 @@ const Wrapper = styled.section`
 }
 
   .close-btn {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background: transparent;
     border-color: transparent;
     color: var(--clr-primary-5);
     transition: var(--transition);
     cursor: pointer;
-    margin-top: 0.2rem;
+    margin-top: 0rem;
     align-self:flex-start;
   }
 

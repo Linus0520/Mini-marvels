@@ -43,7 +43,6 @@ const Wrapper = styled.section`
 
   .form-input,
   .submit-btn {
-    font-size: 1rem;
     padding: 0.8rem;
     border: 1px solid var(--clr-grey-7);
   }
@@ -82,6 +81,10 @@ const Wrapper = styled.section`
     p {
       margin-bottom: 0;
     }
+
+    .submit-btn {
+    font-size: 1rem;
+  }
   }
   @media (min-width: 1280px) {
     padding: 15rem 0;

@@ -135,10 +135,10 @@ const Wrapper = styled.section`
   .hide-btn{
     display:none;
   }
-
   .show-btn{
     display:block;
   }
+
 `
 
 export default Sort

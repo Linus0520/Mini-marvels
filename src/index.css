@@ -63,7 +63,7 @@ body {
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
 }
 ul {
   list-style-type: none;
@@ -139,6 +139,7 @@ p {
 
 }
 .section-center {
+  text-align: center;
   width: 70vw;
   margin: 0 auto;
   max-width: var(--max-width);
@@ -155,6 +156,7 @@ p {
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
+    text-align: left;
   }
 }
 .text-center {
@@ -186,7 +188,7 @@ p {
   display: inline-block;
   font-weight: 400;
   transition: var(--transition);
-  font-size: 1rem;
+  /* font-size: 1rem; */
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2rem;
