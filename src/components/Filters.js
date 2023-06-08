@@ -180,6 +180,8 @@ const Wrapper = styled.section`
     cursor: pointer;
     margin-top: 0rem;
     align-self:flex-start;
+    margin-top:-1.5rem;
+    margin-right:-1.5rem;
   }
 
   .form-control {

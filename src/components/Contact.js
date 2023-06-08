@@ -51,6 +51,8 @@ const Wrapper = styled.section`
     color: var(--clr-grey-3);
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
   }
 
   .form-input::placeholder {
